@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sentiment Analysis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container" style="display:flex;gap:2rem;">
+    <!-- Bên trái -->
+    <div style="flex:2;min-width:320px;">
+      <h1>Amazon Review Sentiment Analysis</h1>
+      <div style="margin-bottom:0.5rem;">
+        <button onclick="fillSample(0)">Sample 1</button>
+        <button onclick="fillSample(1)">Sample 2</button>
+        <button onclick="fillSample(2)">Sample 3</button>
+        <button onclick="fillSample(3)">Sample 4</button>
+      </div>
+      <textarea id="review" placeholder="Nhập mỗi đánh giá trên một dòng..."></textarea>
+      <button onclick="analyzeSentiment()">Dự đoán</button>
+      <div id="result"></div>
+      <div id="compare-table"></div>
+      <div id="history" style="margin-top:2rem"></div>
+    </div>
+    <!-- Bên phải -->
+    <div style="flex:1;min-width:220px;display:flex;flex-direction:column;align-items:center;">
+      <h3>Biểu đồ cảm xúc</h3>
+      <canvas id="sentimentChart" width="300" height="300"></canvas>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</body>
+</html>
